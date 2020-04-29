@@ -1,6 +1,6 @@
 <?php
 $title = 'Login';
-require 'header.php';
+require 'html/header.php';
 ?>
 
 <form action="data.php" method="post">
@@ -12,5 +12,5 @@ require 'header.php';
 </form>
 
 <?php
-require 'footer.php';
+require 'html/footer.php';
 ?>

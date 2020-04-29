@@ -1,6 +1,6 @@
 <?php
 $title = 'Register';
-require 'header.php';
+require 'html/header.php';
 ?>
 
 <form action="db.php" method="post">
@@ -16,5 +16,5 @@ require 'header.php';
 </form>
 
 <?php
-require 'footer.php';
+require 'html/footer.php';
 ?>
