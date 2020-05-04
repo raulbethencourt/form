@@ -1,3 +1,4 @@
+//Menu burger
 $(document).ready(function () {
     $(".icon").click(function () {
         $("#nav-buttons").css("display", "flex");

@@ -12,6 +12,8 @@ ul {
     padding: 0px;
 }
 
+
+
 #nav-header {
     display: flex;
     justify-content: space-evenly;
@@ -30,7 +32,7 @@ ul {
     color: #0f0f0f;
 }
 
-#fake-nav ul a:hover {
+body a:hover {
     text-decoration: none;
 }
 
@@ -58,10 +60,6 @@ nav #nav-logo {
     padding: 0 20px;
 }
 
-#nav-buttons a:hover {
-    text-decoration: none;
-}
-
 #nav-buttons .nav-icons {
     width: 23px;
     margin-right: 15px;
@@ -78,6 +76,20 @@ nav #nav-logo {
 #carouselExampleIndicators {
     width: 75%;
 }
+
+#welcome h2 {
+    margin: 0;
+    text-align: center;
+}
+
+#welcome {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    background-color: #9fb9ae;
+}
+
 
 form {
     display: flex;
@@ -106,6 +118,7 @@ form input {
 }
 
 #submit {
+    text-align: center;
     width: 300px;
     background-color: #0f0f0f;
     color: white;
@@ -127,7 +140,7 @@ form input {
     padding: 60px 0;
 }
 
-#separation h2{
+#separation h2 {
     font-weight: bolder;
     font-size: 40px;
 }
@@ -249,7 +262,7 @@ p {
     #carouselExampleIndicators {
         width: 100%;
     }
-    
+
     form {
         width: 100%;
         padding: 0 50px;

@@ -7,13 +7,13 @@
     <meta name="author" content="Raul Bethencourt Gonzalez">
     <meta name="description" content="This is my first active form">
     <meta name="keywords" content="form, php">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
+    <!-- Dynamic title -->
     <title>
         <?php if (isset($title)) : ?>
             <?= $title; ?>
@@ -25,10 +25,9 @@
 
 <body>
     <header>
-            
         <nav id="nav-header">
             <div id="fake-nav">
-                <a href="index.php" id="nav-logo"><img src="img/seat-Icon-nav.svg" alt="logo Seat"></a>
+                <a href="../view/index.php" id="nav-logo"><img src="../img/seat-Icon-nav.svg" alt="logo Seat"></a>
                 <ul id="nav">
                     <a href="https://www.seat.fr/voitures/mii-electric/general.html" id="models">Modèles <i class="fas fa-chevron-down" style="color: #949494; font-size: 13px;"></i></a>
                     <a href="https://www.seat.fr/preparer-mon-achat/offres.html">Offres</a>
@@ -38,8 +37,8 @@
                 </ul>
             </div>
             <div id="nav-buttons">
-                <a href="index.php"><img src="img/tab1.svg" alt="icon" class="nav-icons">Login</a>
-                <a href="register.php"><img src="img/find_dealer.svg" alt="icon" class="nav-icons">Register</a>
+                <a href="../view/index.php"><img src="../img/tab1.svg" alt="icon" class="nav-icons">Login</a>
+                <a href="../view/register.php"><img src="../img/find_dealer.svg" alt="icon" class="nav-icons">Register</a>
             </div>
             <button class="icon"><i class="fa fa-bars"></i></button>
         </nav>
@@ -54,13 +53,13 @@
                 </ol>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="img/car1.jpg" class="d-block w-100" alt="car">
+                        <img src="../img/car1.jpg" class="d-block w-100" alt="car">
                     </div>
                     <div class="carousel-item">
-                        <img src="img/car2.jpg" class="d-block w-100" alt="car">
+                        <img src="../img/car2.jpg" class="d-block w-100" alt="car">
                     </div>
                     <div class="carousel-item">
-                        <img src="img/car3.jpg" class="d-block w-100" alt="car">
+                        <img src="../img/car3.jpg" class="d-block w-100" alt="car">
                     </div>
                 </div>
                 <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
