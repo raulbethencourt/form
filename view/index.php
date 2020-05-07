@@ -1,28 +1,13 @@
 <?php
-session_start();
-
-//Creates token  
-$token = bin2hex(openssl_random_pseudo_bytes(24)) . time();
-//Insert token in session
-if (!isset($_SESSION['token'])) {
-    $_SESSION['token'] = $token;
-} else $token = $_SESSION['token'];
-
-if (isset($_SESSION['user']) && !hash_equals($_SESSION['token'], $_SESSION['user']['token'])) {
-    header("Location: ../controller/logout.php");
-    exit();
-}
-
-//Control if user it's already connected  ???
-if (!empty($_COOKIE['utilisateur'])) {
-    header("Location: ../view/welcome.php");
-    exit();
-}
 
 //I call needed files 
+require '../controller/log.php';
+require '../controller/connection.php';
 require '../controller/errors.php';
+
+//HTML
 $title = 'Login';
-require '../view/html/header.php';
+include '../view/html/header.php';
 ?>
 
 <form action="../controller/login_security.php" method="POST">
@@ -45,5 +30,6 @@ require '../view/html/header.php';
 </form>
 
 <?php
-require '../view/html/footer.php';
+//HTML
+include '../view/html/footer.php';
 ?>

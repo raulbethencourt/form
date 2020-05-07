@@ -8,6 +8,8 @@ if (!empty($_POST)) {
     $f_password = filter_input(INPUT_POST, 'password', FILTER_VALIDATE_REGEXP, [
         "options" => array("regexp" => '/[A-Za-z0-9]{6,32}/')
     ]);
+
+    //I check if user token is the same that session
     if ($_POST['token'] === $_SESSION['token']) {
         //Here I check if user has give infos
         if ($f_email && $f_password) {
@@ -20,6 +22,7 @@ if (!empty($_POST)) {
                 if (password_verify($f_password, $user['password'])) {
                     $user['token'] = $_POST['token'];
                     $_SESSION['user'] = $user;
+                    $_SESSION['connect'] = 1;
 
                     //If user select to rest connected
                     if ($_POST['remember']) {
@@ -27,8 +30,8 @@ if (!empty($_POST)) {
                     }
                     header("Location: ../view/welcome.php");
 
-                  //All errors if something doesn't works  
-                } else header("Location: ../view/index.php?error=2"); 
+                    //All errors if something doesn't works  
+                } else header("Location: ../view/index.php?error=2");
             } else header("Location: ../view/index.php?error=2");
         } else header("Location: ../view/index.php?error=1");
     } else header("Location: ../view/index.php?error=0");

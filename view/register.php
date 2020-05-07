@@ -1,17 +1,13 @@
 <?php
-$title = 'Register';
-
-//Control if user it's already connected
-if (!empty($_COOKIE['utilisateur'])) {
-    header("Location: ../view/welcome.php");
-    exit();
-}
-
-$secret = "";
 
 //I call needed files
+require '../controller/log.php';
+require '../controller/connection.php';
 require '../controller/errors.php';
-require '../view/html/header.php';
+
+//HTML
+$title = 'Register';
+include '../view/html/header.php';
 ?>
 
 <form action="../controller/register_security.php" method="post">
@@ -31,5 +27,6 @@ require '../view/html/header.php';
 </form>
 
 <?php
-require '../view/html/footer.php';
+//HTML
+include '../view/html/footer.php';
 ?>

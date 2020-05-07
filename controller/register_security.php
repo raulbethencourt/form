@@ -15,7 +15,7 @@ if (!empty($_POST)) {
         "options" => array("regexp" => '/[A-Za-z0-9]{6,32}/')
     ]);
 
-    //If all information its given
+    //Check if user gives all information its given
     if ($f_username && $f_email && $f_password === $_POST['confirm-password']) {
         
         //Check if account already exists
