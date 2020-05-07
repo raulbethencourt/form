@@ -1,7 +1,6 @@
 <?php
 
 //I call needed files 
-require '../controller/log.php';
 require '../controller/connection.php';
 require '../controller/errors.php';
 
@@ -12,14 +11,7 @@ include '../view/html/header.php';
 
 <form action="../controller/login_security.php" method="POST">
     <!-- show errors to user -->
-    <?php 
-    if (!empty($_GET) && isset($_GET['error'])) {
-        echo '<h4 style="text-align: center" class="alert alert-danger">' . $errors[$_GET['error']] . '</h4>';
-    }
-    if (!empty($_GET) && isset($_GET['register'])) {
-        echo '<h4 style="text-align: center" class="alert alert-success">Vous êtes enregistré</h4>';
-    }
-    ?>
+    <?php getErrorsLog($_GET, $errors);  ?>
     <input type="hidden" name="token" value="<?= $token ?>">
     <label for="email">Email</label>
     <input type="email" name="email" id="email">

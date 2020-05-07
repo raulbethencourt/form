@@ -36,3 +36,4 @@ if (!empty($_POST)) {
         } else header("Location: ../view/index.php?error=1");
     } else header("Location: ../view/index.php?error=0");
 } else header("Location: ../view/index.php?error=0");
+

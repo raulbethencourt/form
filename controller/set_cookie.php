@@ -3,7 +3,7 @@ session_start();
 
 //Check if we arrive from form
 if (!isset($_SESSION['user']) && !isset($_COOKIE['connect'])) {
-    header("Location: ../view/index.php");
+    header("Location: ../view/index.php?error=0");
     exit();
 } else {
     //If user chose being remember, send cookie 

@@ -1,7 +1,6 @@
 <?php
 
 //I call needed files
-require '../controller/log.php';
 require '../controller/connection.php';
 require '../controller/errors.php';
 
@@ -12,9 +11,7 @@ include '../view/html/header.php';
 
 <form action="../controller/register_security.php" method="post">
     <!-- show errors to user -->
-    <?php if (!empty($_GET) && $_GET['error'] !== false) {
-        echo '<h4 style="text-align: center" class="alert alert-danger">'. $errors[$_GET['error']]. '</h4>';
-    }?>
+    <?php getErrorsRegister($_GET, $errors); ?>
     <label for="pseudo" class="form-register-label">Username</label>
     <input type="text" name="pseudo" id="pseudo" class="form-register">
     <label for="email" class="form-register-label">Email</label>

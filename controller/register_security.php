@@ -17,10 +17,10 @@ if (!empty($_POST)) {
 
     //Check if user gives all information its given
     if ($f_username && $f_email && $f_password === $_POST['confirm-password']) {
-        
+
         //Check if account already exists
         require '../model/manager.php';
-        if(findUserBy($db,$f_email) == null){
+        if (findUserBy($db, $f_email) == null) {
 
             //Crypting the password and secret
             if (defined('PASSWORD_ARGON2ID')) {
@@ -39,4 +39,3 @@ if (!empty($_POST)) {
         } else header("Location: ../view/register.php?error=3");
     } else header("Location: ../view/register.php?error=1");
 } else header("Location: ../view/register.php?error=0");
-
