@@ -2,6 +2,7 @@
 require "../model/db.php";
 
 if ($_SESSION) {
+    
     //Function to find if the user is inside the data base
     function findUserBy($db, $email)
     {
@@ -58,4 +59,5 @@ if ($_SESSION) {
             exit();
         }
     }
+
 } else header("Location: ../view/index.php?error=0");

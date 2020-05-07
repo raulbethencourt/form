@@ -5,6 +5,7 @@ session_start();
 if (!isset($_SESSION['user']) && !isset($_COOKIE['connect'])) {
     header("Location: ../view/index.php?error=0");
     exit();
+    
 } else {
     //If user chose being remember, send cookie 
     if (isset($_SESSION['user']['remember'])) {
