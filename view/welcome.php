@@ -1,20 +1,21 @@
 <?php
 //Initialize session data
 session_start();
-var_dump($_SESSION['user']);
+
 //Check if we arrive from form
 if (!isset($_SESSION['user'])) {
     header("Location: ../view/index.php");
+    exit();
 }
 
 //If user chose being remember, send cookie 
-if (array_key_exists(0, $_SESSION['user'])) {
-    setcookie('utilisateur', $_SESSION['user']['username'], time() + 60 * 60 * 24, "");
+if (isset($_SESSION['user']['remember'])) {
+    setcookie('connect', $_SESSION['user']['secret'], time() + 60 * 60 * 24); 
 }
 
 $title = 'Welcome';
 //I call needed files 
-require '../html/header.php';
+require '../view/html/header.php';
 ?>
 
 <div id="welcome">
@@ -28,5 +29,5 @@ require '../html/header.php';
     <a href="../controller/logout.php" id="submit">Déconnexion</a>
 </div>
 <?php
-require '../html/footer.php';
+require '../view/html/footer.php';
 ?>

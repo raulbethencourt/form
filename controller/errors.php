@@ -3,5 +3,6 @@
 $errors = [
     "Tentative de piratage !",
     "Champs obligatoires manquants !",
-    "Identifiants incorrects !"
+    "Identifiants incorrects !",
+    "Déjà enregistré"
 ];

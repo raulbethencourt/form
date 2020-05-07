@@ -12,4 +12,9 @@ $(document).ready(function () {
         $("#fake-nav ul").css("flex-direction", "column");
         $(".icon").css("display", "none");
     });
+
+    $("#password").focus(function () { 
+        e.preventDefault();
+        
+    });
 });

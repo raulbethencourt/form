@@ -12,8 +12,6 @@ ul {
     padding: 0px;
 }
 
-
-
 #nav-header {
     display: flex;
     justify-content: space-evenly;
@@ -100,9 +98,15 @@ form {
     background-color: #9fb9ae;
 }
 
+.form-register-label {
+    font-size: 12px;
+    margin: 0;
+    padding: 2px 0;
+}
+
 .form-register {
-    font-size: 15px;
-    padding: 7px 0;
+    margin: 4px 0;
+    
 }
 
 form label {
